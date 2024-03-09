@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "OlbbdNjA5ms5mq2sSsZNp5DtWm7VgHqmADYhqHa4UWo=",
+  "Source": "GestorDeCitas",
+  "BasePath": "_content/GestorDeCitas",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "GestorDeCitas\\wwwroot",
+      "Source": "GestorDeCitas",
+      "ContentRoot": "C:\\Users\\guill\\OneDrive\\Escritorio\\Glucontrol NO BORRAR\\Resultado final DiabetesNoteBook\\GestorDeCitas\\GestorDeCitas\\wwwroot\\",
+      "BasePath": "_content/GestorDeCitas",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

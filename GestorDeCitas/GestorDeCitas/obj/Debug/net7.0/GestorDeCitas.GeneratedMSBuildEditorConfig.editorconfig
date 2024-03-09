@@ -1,0 +1,27 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = GestorDeCitas
+build_property.RootNamespace = GestorDeCitas
+build_property.ProjectDir = C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/guill/OneDrive/Escritorio/Glucontrol NO BORRAR/Resultado final DiabetesNoteBook/GestorDeCitas/GestorDeCitas/Views/RecoverPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjb3ZlclBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/guill/OneDrive/Escritorio/Glucontrol NO BORRAR/Resultado final DiabetesNoteBook/GestorDeCitas/GestorDeCitas/Views/ViewRegisterEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlld1JlZ2lzdGVyRW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

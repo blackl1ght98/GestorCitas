@@ -1,0 +1,941 @@
+INFO  2024-03-09 12:29:50 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: https://localhost:7130
+INFO  2024-03-09 12:29:50 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: http://localhost:5020
+INFO  2024-03-09 12:29:50 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Application started. Press Ctrl+C to shut down.
+INFO  2024-03-09 12:29:50 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Hosting environment: Development
+INFO  2024-03-09 12:29:50 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Content root path: C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas
+INFO  2024-03-09 12:30:52 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (198ms) [Parameters=[@__email_0='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__email_0
+INFO  2024-03-09 12:30:53 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (226ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (DbType = Boolean), @p2='?' (Size = 100) (DbType = AnsiString), @p3='?' (Size = 500) (DbType = AnsiString), @p4='?' (Size = 50), @p5='?' (DbType = DateTime), @p6='?' (DbType = Date), @p7='?' (DbType = DateTime), @p8='?' (Size = 8000) (DbType = AnsiString), @p9='?' (Size = 500), @p10='?' (Size = 50), @p11='?' (Size = 8000) (DbType = Binary), @p12='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Usuarios] ([BajaUsuario], [ConfirmacionEmail], [Direccion], [Email], [EnlaceCambioPass], [FechaEnlaceCambioPass], [FechaNacimiento], [FechaRegistro], [NombreCompleto], [Password], [Rol], [Salt], [Telefono])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+INFO  2024-03-09 12:31:00 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (122ms) [Parameters=[@__userDataRegister_ToEmail_0='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__userDataRegister_ToEmail_0
+INFO  2024-03-09 12:31:00 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (44ms) [Parameters=[@p13='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = Boolean), @p2='?' (Size = 100) (DbType = AnsiString), @p3='?' (Size = 500) (DbType = AnsiString), @p4='?' (Size = 50), @p5='?' (DbType = DateTime), @p6='?' (DbType = Date), @p7='?' (DbType = DateTime), @p8='?' (Size = 8000) (DbType = AnsiString), @p9='?' (Size = 500), @p10='?' (Size = 50), @p11='?' (Size = 8000) (DbType = Binary), @p12='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Usuarios] SET [BajaUsuario] = @p0, [ConfirmacionEmail] = @p1, [Direccion] = @p2, [Email] = @p3, [EnlaceCambioPass] = @p4, [FechaEnlaceCambioPass] = @p5, [FechaNacimiento] = @p6, [FechaRegistro] = @p7, [NombreCompleto] = @p8, [Password] = @p9, [Rol] = @p10, [Salt] = @p11, [Telefono] = @p12
+OUTPUT 1
+WHERE [Id] = @p13;
+INFO  2024-03-09 12:31:09 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (21ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__id_0
+INFO  2024-03-09 12:31:09 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@__confirm_UserId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__confirm_UserId_0
+INFO  2024-03-09 12:31:38 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (28,503ms) [Parameters=[@p13='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = Boolean), @p2='?' (Size = 100) (DbType = AnsiString), @p3='?' (Size = 500) (DbType = AnsiString), @p4='?' (Size = 50), @p5='?' (DbType = DateTime), @p6='?' (DbType = Date), @p7='?' (DbType = DateTime), @p8='?' (Size = 8000) (DbType = AnsiString), @p9='?' (Size = 500), @p10='?' (Size = 50), @p11='?' (Size = 8000) (DbType = Binary), @p12='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Usuarios] SET [BajaUsuario] = @p0, [ConfirmacionEmail] = @p1, [Direccion] = @p2, [Email] = @p3, [EnlaceCambioPass] = @p4, [FechaEnlaceCambioPass] = @p5, [FechaNacimiento] = @p6, [FechaRegistro] = @p7, [NombreCompleto] = @p8, [Password] = @p9, [Rol] = @p10, [Salt] = @p11, [Telefono] = @p12
+OUTPUT 1
+WHERE [Id] = @p13;
+INFO  2024-03-09 12:31:55 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (11,896ms) [Parameters=[@__usuario_Email_0='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__usuario_Email_0
+INFO  2024-03-09 12:31:55 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (88ms) [Parameters=[@__credencialesUsuario_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__credencialesUsuario_Id_0
+INFO  2024-03-09 12:32:10 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (14ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__id_0
+INFO  2024-03-09 12:32:10 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__delete_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__delete_Id_0
+INFO  2024-03-09 12:32:10 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@p13='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = Boolean), @p2='?' (Size = 100) (DbType = AnsiString), @p3='?' (Size = 500) (DbType = AnsiString), @p4='?' (Size = 50), @p5='?' (DbType = DateTime), @p6='?' (DbType = Date), @p7='?' (DbType = DateTime), @p8='?' (Size = 8000) (DbType = AnsiString), @p9='?' (Size = 500), @p10='?' (Size = 50), @p11='?' (Size = 8000) (DbType = Binary), @p12='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Usuarios] SET [BajaUsuario] = @p0, [ConfirmacionEmail] = @p1, [Direccion] = @p2, [Email] = @p3, [EnlaceCambioPass] = @p4, [FechaEnlaceCambioPass] = @p5, [FechaNacimiento] = @p6, [FechaRegistro] = @p7, [NombreCompleto] = @p8, [Password] = @p9, [Rol] = @p10, [Salt] = @p11, [Telefono] = @p12
+OUTPUT 1
+WHERE [Id] = @p13;
+INFO  2024-03-09 12:37:32 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: https://localhost:7130
+INFO  2024-03-09 12:37:32 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: http://localhost:5020
+INFO  2024-03-09 12:37:32 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Application started. Press Ctrl+C to shut down.
+INFO  2024-03-09 12:37:32 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Hosting environment: Development
+INFO  2024-03-09 12:37:32 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Content root path: C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas
+INFO  2024-03-09 12:37:55 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (79ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__id_0
+INFO  2024-03-09 12:38:00 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4,859ms) [Parameters=[@__delete_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[BajaUsuario], [t].[ConfirmacionEmail], [t].[Direccion], [t].[Email], [t].[EnlaceCambioPass], [t].[FechaEnlaceCambioPass], [t].[FechaNacimiento], [t].[FechaRegistro], [t].[NombreCompleto], [t].[Password], [t].[Rol], [t].[Salt], [t].[Telefono], [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+    FROM [Usuarios] AS [u]
+    WHERE [u].[Id] = @__delete_Id_0
+) AS [t]
+LEFT JOIN [Cita] AS [c] ON [t].[Id] = [c].[Id_Usuario]
+ORDER BY [t].[Id]
+INFO  2024-03-09 12:38:05 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4,997ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Usuarios]
+OUTPUT 1
+WHERE [Id] = @p0;
+INFO  2024-03-09 13:06:11 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: https://localhost:7130
+INFO  2024-03-09 13:06:11 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: http://localhost:5020
+INFO  2024-03-09 13:06:11 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Application started. Press Ctrl+C to shut down.
+INFO  2024-03-09 13:06:11 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Hosting environment: Development
+INFO  2024-03-09 13:06:11 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Content root path: C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas
+ERROR 2024-03-09 13:06:38 – Clase: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - Mensaje: An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'GestorDeCitas.Infrastructure.Interfaces.IActualizacionYEnvioDeCorreoElectronico' while attempting to activate 'GestorDeCitas.Infrastructure.Controllers.UsersController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+INFO  2024-03-09 13:07:25 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: https://localhost:7130
+INFO  2024-03-09 13:07:25 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: http://localhost:5020
+INFO  2024-03-09 13:07:25 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Application started. Press Ctrl+C to shut down.
+INFO  2024-03-09 13:07:25 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Hosting environment: Development
+INFO  2024-03-09 13:07:25 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Content root path: C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas
+ERROR 2024-03-09 13:07:56 – Clase: Microsoft.EntityFrameworkCore.Database.Connection - Mensaje: An error occurred using the connection to database 'AgendaCita' on server 'DESKTOP-2TL9C3O\SQLEXPRESS'.
+ERROR 2024-03-09 13:07:56 – Clase: Microsoft.EntityFrameworkCore.Query - Mensaje: An exception occurred while iterating over the results of a query for context type 'GestorDeCitas.Domain.Models.AgendaCitaContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=53; handshake=24; [Login] initialization=3; authentication=8; [Post-Login] complete=14017; 
+ ---> System.ComponentModel.Win32Exception (258): Tiempo de espera de la operación de espera agotado.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:67398845-2b1b-4f78-bd4b-7c8dabfe05f5
+Error Number:-2,State:0,Class:11
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=53; handshake=24; [Login] initialization=3; authentication=8; [Post-Login] complete=14017; 
+ ---> System.ComponentModel.Win32Exception (258): Tiempo de espera de la operación de espera agotado.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:67398845-2b1b-4f78-bd4b-7c8dabfe05f5
+Error Number:-2,State:0,Class:11
+ERROR 2024-03-09 13:08:18 – Clase: Microsoft.EntityFrameworkCore.Database.Connection - Mensaje: An error occurred using the connection to database 'AgendaCita' on server 'DESKTOP-2TL9C3O\SQLEXPRESS'.
+ERROR 2024-03-09 13:08:18 – Clase: Microsoft.EntityFrameworkCore.Query - Mensaje: An exception occurred while iterating over the results of a query for context type 'GestorDeCitas.Domain.Models.AgendaCitaContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15000; 
+ ---> System.ComponentModel.Win32Exception (258): Tiempo de espera de la operación de espera agotado.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(SqlConnectionEncryptOption encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean& marsCapable, Boolean& fedAuthRequired, Boolean tlsFirst, String serverCert)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:c38674a4-7038-4729-b74a-57ca90ed736f
+Error Number:-2,State:0,Class:11
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15000; 
+ ---> System.ComponentModel.Win32Exception (258): Tiempo de espera de la operación de espera agotado.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(SqlConnectionEncryptOption encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean& marsCapable, Boolean& fedAuthRequired, Boolean tlsFirst, String serverCert)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:c38674a4-7038-4729-b74a-57ca90ed736f
+Error Number:-2,State:0,Class:11
+INFO  2024-03-09 13:08:32 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: https://localhost:7130
+INFO  2024-03-09 13:08:32 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: http://localhost:5020
+INFO  2024-03-09 13:08:32 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Application started. Press Ctrl+C to shut down.
+INFO  2024-03-09 13:08:32 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Hosting environment: Development
+INFO  2024-03-09 13:08:32 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Content root path: C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas
+INFO  2024-03-09 13:09:45 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (15,174ms) [Parameters=[@__usuario_Email_0='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__usuario_Email_0
+INFO  2024-03-09 13:09:49 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3,569ms) [Parameters=[@__credencialesUsuario_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__credencialesUsuario_Id_0
+ERROR 2024-03-09 13:12:11 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Failed executing DbCommand (34,661ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__id_0
+ERROR 2024-03-09 13:12:11 – Clase: Microsoft.EntityFrameworkCore.Query - Mensaje: An exception occurred while iterating over the results of a query for context type 'GestorDeCitas.Domain.Models.AgendaCitaContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Tiempo de espera de la operación de espera agotado.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:8fef887d-1d0c-4eb2-9ffa-2e9e1bf0d7ac
+Error Number:-2,State:0,Class:11
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Tiempo de espera de la operación de espera agotado.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:8fef887d-1d0c-4eb2-9ffa-2e9e1bf0d7ac
+Error Number:-2,State:0,Class:11
+ERROR 2024-03-09 13:12:11 – Clase: GestorDeCitas.Infrastructure.Controllers.UsersController - Mensaje: Error al procesar la consulta de id de usuario existente
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Tiempo de espera de la operación de espera agotado.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at GestorDeCitas.Application.Services.Genereics.ExistUsersService.UserExistById(Int32 id) in C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas\Application\Services\Genereics\ExistUsersService.cs:line 41
+ClientConnectionId:8fef887d-1d0c-4eb2-9ffa-2e9e1bf0d7ac
+Error Number:-2,State:0,Class:11
+ERROR 2024-03-09 13:12:11 – Clase: GestorDeCitas.Infrastructure.Controllers.UsersController - Mensaje: Error al procesar de eliminación actualización de usuario
+System.Exception: Error al procesar la solicitud
+   at GestorDeCitas.Application.Services.Genereics.ExistUsersService.UserExistById(Int32 id) in C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas\Application\Services\Genereics\ExistUsersService.cs:line 48
+   at GestorDeCitas.Infrastructure.Controllers.UsersController.UserPUT(DTOChangeUserData userData) in C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas\Infrastructure\Controllers\UsersController.cs:line 334
+INFO  2024-03-09 13:13:26 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (10,211ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__id_0
+INFO  2024-03-09 13:13:40 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (1,136ms) [Parameters=[@__changeUserData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__changeUserData_Id_0
+INFO  2024-03-09 13:13:41 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (147ms) [Parameters=[@p13='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = Boolean), @p2='?' (Size = 100) (DbType = AnsiString), @p3='?' (Size = 500) (DbType = AnsiString), @p4='?' (Size = 50), @p5='?' (DbType = DateTime), @p6='?' (DbType = Date), @p7='?' (DbType = DateTime), @p8='?' (Size = 8000) (DbType = AnsiString), @p9='?' (Size = 500), @p10='?' (Size = 50), @p11='?' (Size = 8000) (DbType = Binary), @p12='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Usuarios] SET [BajaUsuario] = @p0, [ConfirmacionEmail] = @p1, [Direccion] = @p2, [Email] = @p3, [EnlaceCambioPass] = @p4, [FechaEnlaceCambioPass] = @p5, [FechaNacimiento] = @p6, [FechaRegistro] = @p7, [NombreCompleto] = @p8, [Password] = @p9, [Rol] = @p10, [Salt] = @p11, [Telefono] = @p12
+OUTPUT 1
+WHERE [Id] = @p13;
+INFO  2024-03-09 13:13:46 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (146ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__userId_0
+INFO  2024-03-09 13:13:49 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (134ms) [Parameters=[@__userDataRegister_ToEmail_0='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__userDataRegister_ToEmail_0
+INFO  2024-03-09 13:13:49 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (6ms) [Parameters=[@p13='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = Boolean), @p2='?' (Size = 100) (DbType = AnsiString), @p3='?' (Size = 500) (DbType = AnsiString), @p4='?' (Size = 50), @p5='?' (DbType = DateTime), @p6='?' (DbType = Date), @p7='?' (DbType = DateTime), @p8='?' (Size = 8000) (DbType = AnsiString), @p9='?' (Size = 500), @p10='?' (Size = 50), @p11='?' (Size = 8000) (DbType = Binary), @p12='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Usuarios] SET [BajaUsuario] = @p0, [ConfirmacionEmail] = @p1, [Direccion] = @p2, [Email] = @p3, [EnlaceCambioPass] = @p4, [FechaEnlaceCambioPass] = @p5, [FechaNacimiento] = @p6, [FechaRegistro] = @p7, [NombreCompleto] = @p8, [Password] = @p9, [Rol] = @p10, [Salt] = @p11, [Telefono] = @p12
+OUTPUT 1
+WHERE [Id] = @p13;
+INFO  2024-03-09 15:29:58 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: https://localhost:7130
+INFO  2024-03-09 15:29:58 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: http://localhost:5020
+INFO  2024-03-09 15:29:58 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Application started. Press Ctrl+C to shut down.
+INFO  2024-03-09 15:29:58 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Hosting environment: Development
+INFO  2024-03-09 15:29:58 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Content root path: C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas
+ERROR 2024-03-09 15:30:55 – Clase: Microsoft.EntityFrameworkCore.Database.Connection - Mensaje: An error occurred using the connection to database 'AgendaCita' on server 'DESKTOP-2TL9C3O\SQLEXPRESS'.
+ERROR 2024-03-09 15:30:55 – Clase: Microsoft.EntityFrameworkCore.Query - Mensaje: An exception occurred while iterating over the results of a query for context type 'GestorDeCitas.Domain.Models.AgendaCitaContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=115; handshake=25; [Login] initialization=2; authentication=5; [Post-Login] complete=14024; 
+ ---> System.ComponentModel.Win32Exception (258): Tiempo de espera de la operación de espera agotado.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:61dd32c9-e0a0-4797-b2c8-881ccec34b3b
+Error Number:-2,State:0,Class:11
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=115; handshake=25; [Login] initialization=2; authentication=5; [Post-Login] complete=14024; 
+ ---> System.ComponentModel.Win32Exception (258): Tiempo de espera de la operación de espera agotado.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:61dd32c9-e0a0-4797-b2c8-881ccec34b3b
+Error Number:-2,State:0,Class:11
+ERROR 2024-03-09 15:31:18 – Clase: Microsoft.EntityFrameworkCore.Database.Connection - Mensaje: An error occurred using the connection to database 'AgendaCita' on server 'DESKTOP-2TL9C3O\SQLEXPRESS'.
+ERROR 2024-03-09 15:31:18 – Clase: Microsoft.EntityFrameworkCore.Query - Mensaje: An exception occurred while iterating over the results of a query for context type 'GestorDeCitas.Domain.Models.AgendaCitaContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=893; [Login] initialization=0; authentication=0; [Post-Login] complete=14010; 
+ ---> System.ComponentModel.Win32Exception (258): Tiempo de espera de la operación de espera agotado.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:e3f501dc-9c86-41fb-b38a-5d7a83188104
+Error Number:-2,State:0,Class:11
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=893; [Login] initialization=0; authentication=0; [Post-Login] complete=14010; 
+ ---> System.ComponentModel.Win32Exception (258): Tiempo de espera de la operación de espera agotado.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:e3f501dc-9c86-41fb-b38a-5d7a83188104
+Error Number:-2,State:0,Class:11
+INFO  2024-03-09 15:31:31 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: https://localhost:7130
+INFO  2024-03-09 15:31:31 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: http://localhost:5020
+INFO  2024-03-09 15:31:31 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Application started. Press Ctrl+C to shut down.
+INFO  2024-03-09 15:31:31 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Hosting environment: Development
+INFO  2024-03-09 15:31:31 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Content root path: C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas
+INFO  2024-03-09 15:31:57 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (266ms) [Parameters=[@__usuario_Email_0='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__usuario_Email_0
+INFO  2024-03-09 15:31:57 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (132ms) [Parameters=[@__credencialesUsuario_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__credencialesUsuario_Id_0
+ERROR 2024-03-09 15:33:13 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Failed executing DbCommand (35,029ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__id_0
+ERROR 2024-03-09 15:33:13 – Clase: Microsoft.EntityFrameworkCore.Query - Mensaje: An exception occurred while iterating over the results of a query for context type 'GestorDeCitas.Domain.Models.AgendaCitaContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Tiempo de espera de la operación de espera agotado.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:6ec40a0b-6f3e-4dcd-ae9f-3356cf9c3eb1
+Error Number:-2,State:0,Class:11
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Tiempo de espera de la operación de espera agotado.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:6ec40a0b-6f3e-4dcd-ae9f-3356cf9c3eb1
+Error Number:-2,State:0,Class:11
+ERROR 2024-03-09 15:33:13 – Clase: GestorDeCitas.Infrastructure.Controllers.UsersController - Mensaje: Error al procesar la consulta de id de usuario existente
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Tiempo de espera de la operación de espera agotado.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at GestorDeCitas.Application.Services.Genereics.ExistUsersService.UserExistById(Int32 id) in C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas\Application\Services\Genereics\ExistUsersService.cs:line 41
+ClientConnectionId:6ec40a0b-6f3e-4dcd-ae9f-3356cf9c3eb1
+Error Number:-2,State:0,Class:11
+ERROR 2024-03-09 15:33:13 – Clase: GestorDeCitas.Infrastructure.Controllers.UsersController - Mensaje: Error al procesar al cambiar la contraseña
+System.Exception: Error al procesar la solicitud
+   at GestorDeCitas.Application.Services.Genereics.ExistUsersService.UserExistById(Int32 id) in C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas\Application\Services\Genereics\ExistUsersService.cs:line 48
+   at GestorDeCitas.Infrastructure.Controllers.ChangePasswordController.ChangePassword(DTOCambioPassPorId userData) in C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas\Infrastructure\Controllers\ChangePasswordController.cs:line 43
+INFO  2024-03-09 15:33:27 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (601ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__id_0
+INFO  2024-03-09 15:33:27 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-09 15:33:28 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (855ms) [Parameters=[@p13='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = Boolean), @p2='?' (Size = 100) (DbType = AnsiString), @p3='?' (Size = 500) (DbType = AnsiString), @p4='?' (Size = 50), @p5='?' (DbType = DateTime), @p6='?' (DbType = Date), @p7='?' (DbType = DateTime), @p8='?' (Size = 8000) (DbType = AnsiString), @p9='?' (Size = 500), @p10='?' (Size = 50), @p11='?' (Size = 8000) (DbType = Binary), @p12='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Usuarios] SET [BajaUsuario] = @p0, [ConfirmacionEmail] = @p1, [Direccion] = @p2, [Email] = @p3, [EnlaceCambioPass] = @p4, [FechaEnlaceCambioPass] = @p5, [FechaNacimiento] = @p6, [FechaRegistro] = @p7, [NombreCompleto] = @p8, [Password] = @p9, [Rol] = @p10, [Salt] = @p11, [Telefono] = @p12
+OUTPUT 1
+WHERE [Id] = @p13;
+INFO  2024-03-09 15:34:27 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (141ms) [Parameters=[@__email_0='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__email_0
+INFO  2024-03-09 15:34:27 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[ConfirmacionEmail] = CAST(1 AS bit)
+INFO  2024-03-09 15:34:27 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__userData_ToEmail_0='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__userData_ToEmail_0
+ERROR 2024-03-09 15:34:57 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Failed executing DbCommand (30,071ms) [Parameters=[@p13='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = Boolean), @p2='?' (Size = 100) (DbType = AnsiString), @p3='?' (Size = 500) (DbType = AnsiString), @p4='?' (Size = 50), @p5='?' (DbType = DateTime), @p6='?' (DbType = Date), @p7='?' (DbType = DateTime), @p8='?' (Size = 8000) (DbType = AnsiString), @p9='?' (Size = 500), @p10='?' (Size = 50), @p11='?' (Size = 8000) (DbType = Binary), @p12='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Usuarios] SET [BajaUsuario] = @p0, [ConfirmacionEmail] = @p1, [Direccion] = @p2, [Email] = @p3, [EnlaceCambioPass] = @p4, [FechaEnlaceCambioPass] = @p5, [FechaNacimiento] = @p6, [FechaRegistro] = @p7, [NombreCompleto] = @p8, [Password] = @p9, [Rol] = @p10, [Salt] = @p11, [Telefono] = @p12
+OUTPUT 1
+WHERE [Id] = @p13;
+ERROR 2024-03-09 15:34:57 – Clase: Microsoft.EntityFrameworkCore.Update - Mensaje: An exception occurred in the database while saving changes for context type 'GestorDeCitas.Domain.Models.AgendaCitaContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Tiempo de espera de la operación de espera agotado.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:cd005ddb-698a-4902-a1c2-78f412810747
+Error Number:-2,State:0,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Tiempo de espera de la operación de espera agotado.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:cd005ddb-698a-4902-a1c2-78f412810747
+Error Number:-2,State:0,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+ERROR 2024-03-09 15:34:57 – Clase: GestorDeCitas.Infrastructure.Controllers.UsersController - Mensaje: Error al procesar el envio de instrucciones
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Tiempo de espera de la operación de espera agotado.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:cd005ddb-698a-4902-a1c2-78f412810747
+Error Number:-2,State:0,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at GestorDeCitas.Infrastructure.Repositories.UpdateOperations.NewStringGuid.SaveNewStringGuid(Usuario operation) in C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas\Infrastructure\Repositories\NewStringGuid.cs:line 28
+   at GestorDeCitas.Application.Services.EmailService.SendEmailAsyncChangePassword(DTOEmail userData) in C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas\Application\Services\EmailService.cs:line 117
+   at GestorDeCitas.Infrastructure.Controllers.ChangePasswordController.SendInstruction(DTOUsuarioChangePasswordMail usuario) in C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas\Infrastructure\Controllers\ChangePasswordController.cs:line 101
+INFO  2024-03-09 15:35:51 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (8,769ms) [Parameters=[@__email_0='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__email_0
+INFO  2024-03-09 15:36:07 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (15,431ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[ConfirmacionEmail] = CAST(1 AS bit)
+INFO  2024-03-09 15:36:07 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (288ms) [Parameters=[@__userData_ToEmail_0='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__userData_ToEmail_0
+ERROR 2024-03-09 15:36:42 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Failed executing DbCommand (34,741ms) [Parameters=[@p13='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = Boolean), @p2='?' (Size = 100) (DbType = AnsiString), @p3='?' (Size = 500) (DbType = AnsiString), @p4='?' (Size = 50), @p5='?' (DbType = DateTime), @p6='?' (DbType = Date), @p7='?' (DbType = DateTime), @p8='?' (Size = 8000) (DbType = AnsiString), @p9='?' (Size = 500), @p10='?' (Size = 50), @p11='?' (Size = 8000) (DbType = Binary), @p12='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Usuarios] SET [BajaUsuario] = @p0, [ConfirmacionEmail] = @p1, [Direccion] = @p2, [Email] = @p3, [EnlaceCambioPass] = @p4, [FechaEnlaceCambioPass] = @p5, [FechaNacimiento] = @p6, [FechaRegistro] = @p7, [NombreCompleto] = @p8, [Password] = @p9, [Rol] = @p10, [Salt] = @p11, [Telefono] = @p12
+OUTPUT 1
+WHERE [Id] = @p13;
+ERROR 2024-03-09 15:36:42 – Clase: Microsoft.EntityFrameworkCore.Update - Mensaje: An exception occurred in the database while saving changes for context type 'GestorDeCitas.Domain.Models.AgendaCitaContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Tiempo de espera de la operación de espera agotado.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:cd005ddb-698a-4902-a1c2-78f412810747
+Error Number:-2,State:0,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Tiempo de espera de la operación de espera agotado.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:cd005ddb-698a-4902-a1c2-78f412810747
+Error Number:-2,State:0,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+ERROR 2024-03-09 15:36:42 – Clase: GestorDeCitas.Infrastructure.Controllers.UsersController - Mensaje: Error al procesar el envio de instrucciones
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Tiempo de espera de la operación de espera agotado.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:cd005ddb-698a-4902-a1c2-78f412810747
+Error Number:-2,State:0,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at GestorDeCitas.Infrastructure.Repositories.UpdateOperations.NewStringGuid.SaveNewStringGuid(Usuario operation) in C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas\Infrastructure\Repositories\NewStringGuid.cs:line 28
+   at GestorDeCitas.Application.Services.EmailService.SendEmailAsyncChangePassword(DTOEmail userData) in C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas\Application\Services\EmailService.cs:line 117
+   at GestorDeCitas.Infrastructure.Controllers.ChangePasswordController.SendInstruction(DTOUsuarioChangePasswordMail usuario) in C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas\Infrastructure\Controllers\ChangePasswordController.cs:line 101
+INFO  2024-03-09 15:37:08 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: https://localhost:7130
+INFO  2024-03-09 15:37:08 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: http://localhost:5020
+INFO  2024-03-09 15:37:08 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Application started. Press Ctrl+C to shut down.
+INFO  2024-03-09 15:37:08 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Hosting environment: Development
+INFO  2024-03-09 15:37:08 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Content root path: C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas
+INFO  2024-03-09 15:37:24 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (352ms) [Parameters=[@__email_0='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__email_0
+INFO  2024-03-09 15:37:25 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (806ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[ConfirmacionEmail] = CAST(1 AS bit)
+INFO  2024-03-09 15:37:25 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (220ms) [Parameters=[@__userData_ToEmail_0='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__userData_ToEmail_0
+INFO  2024-03-09 15:37:27 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (1,048ms) [Parameters=[@p13='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = Boolean), @p2='?' (Size = 100) (DbType = AnsiString), @p3='?' (Size = 500) (DbType = AnsiString), @p4='?' (Size = 50), @p5='?' (DbType = DateTime), @p6='?' (DbType = Date), @p7='?' (DbType = DateTime), @p8='?' (Size = 8000) (DbType = AnsiString), @p9='?' (Size = 500), @p10='?' (Size = 50), @p11='?' (Size = 8000) (DbType = Binary), @p12='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Usuarios] SET [BajaUsuario] = @p0, [ConfirmacionEmail] = @p1, [Direccion] = @p2, [Email] = @p3, [EnlaceCambioPass] = @p4, [FechaEnlaceCambioPass] = @p5, [FechaNacimiento] = @p6, [FechaRegistro] = @p7, [NombreCompleto] = @p8, [Password] = @p9, [Rol] = @p10, [Salt] = @p11, [Telefono] = @p12
+OUTPUT 1
+WHERE [Id] = @p13;
+ERROR 2024-03-09 15:37:27 – Clase: GestorDeCitas.Infrastructure.Controllers.UsersController - Mensaje: Error al procesar el envio de instrucciones
+System.ArgumentNullException: Value cannot be null. (Parameter 'RecoverPassword does not match any available view')
+   at GestorDeCitas.Application.Services.EmailService.RenderViewToStringAsync(String viewName, Object model) in C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas\Application\Services\EmailService.cs:line 157
+   at GestorDeCitas.Application.Services.EmailService.SendEmailAsyncChangePassword(DTOEmail userData) in C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas\Application\Services\EmailService.cs:line 119
+   at GestorDeCitas.Infrastructure.Controllers.ChangePasswordController.SendInstruction(DTOUsuarioChangePasswordMail usuario) in C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas\Infrastructure\Controllers\ChangePasswordController.cs:line 101
+INFO  2024-03-09 15:38:42 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: https://localhost:7130
+INFO  2024-03-09 15:38:42 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: http://localhost:5020
+INFO  2024-03-09 15:38:42 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Application started. Press Ctrl+C to shut down.
+INFO  2024-03-09 15:38:42 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Hosting environment: Development
+INFO  2024-03-09 15:38:42 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Content root path: C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas
+INFO  2024-03-09 15:38:57 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (1,638ms) [Parameters=[@__email_0='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__email_0
+INFO  2024-03-09 15:38:57 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[ConfirmacionEmail] = CAST(1 AS bit)
+INFO  2024-03-09 15:38:57 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__userData_ToEmail_0='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__userData_ToEmail_0
+INFO  2024-03-09 15:38:57 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (64ms) [Parameters=[@p13='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = Boolean), @p2='?' (Size = 100) (DbType = AnsiString), @p3='?' (Size = 500) (DbType = AnsiString), @p4='?' (Size = 50), @p5='?' (DbType = DateTime), @p6='?' (DbType = Date), @p7='?' (DbType = DateTime), @p8='?' (Size = 8000) (DbType = AnsiString), @p9='?' (Size = 500), @p10='?' (Size = 50), @p11='?' (Size = 8000) (DbType = Binary), @p12='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Usuarios] SET [BajaUsuario] = @p0, [ConfirmacionEmail] = @p1, [Direccion] = @p2, [Email] = @p3, [EnlaceCambioPass] = @p4, [FechaEnlaceCambioPass] = @p5, [FechaNacimiento] = @p6, [FechaRegistro] = @p7, [NombreCompleto] = @p8, [Password] = @p9, [Rol] = @p10, [Salt] = @p11, [Telefono] = @p12
+OUTPUT 1
+WHERE [Id] = @p13;
+INFO  2024-03-09 15:39:52 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (5,762ms) [Parameters=[@__userEmail_Token_0='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[EnlaceCambioPass] = @__userEmail_Token_0
+INFO  2024-03-09 15:39:57 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4,671ms) [Parameters=[@__userData_Token_0='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[EnlaceCambioPass] = @__userData_Token_0
+INFO  2024-03-09 15:40:07 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (9,853ms) [Parameters=[@p13='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = Boolean), @p2='?' (Size = 100) (DbType = AnsiString), @p3='?' (Size = 500) (DbType = AnsiString), @p4='?' (Size = 50), @p5='?' (DbType = DateTime), @p6='?' (DbType = Date), @p7='?' (DbType = DateTime), @p8='?' (Size = 8000) (DbType = AnsiString), @p9='?' (Size = 500), @p10='?' (Size = 50), @p11='?' (Size = 8000) (DbType = Binary), @p12='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Usuarios] SET [BajaUsuario] = @p0, [ConfirmacionEmail] = @p1, [Direccion] = @p2, [Email] = @p3, [EnlaceCambioPass] = @p4, [FechaEnlaceCambioPass] = @p5, [FechaNacimiento] = @p6, [FechaRegistro] = @p7, [NombreCompleto] = @p8, [Password] = @p9, [Rol] = @p10, [Salt] = @p11, [Telefono] = @p12
+OUTPUT 1
+WHERE [Id] = @p13;
+INFO  2024-03-09 16:08:57 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: https://localhost:7130
+INFO  2024-03-09 16:08:57 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: http://localhost:5020
+INFO  2024-03-09 16:08:57 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Application started. Press Ctrl+C to shut down.
+INFO  2024-03-09 16:08:57 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Hosting environment: Development
+INFO  2024-03-09 16:08:57 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Content root path: C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas
+INFO  2024-03-09 16:09:31 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (211ms) [Parameters=[@__usuario_Email_0='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__usuario_Email_0
+INFO  2024-03-09 16:09:31 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (6ms) [Parameters=[@__credencialesUsuario_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__credencialesUsuario_Id_0
+INFO  2024-03-09 16:10:24 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: https://localhost:7130
+INFO  2024-03-09 16:10:24 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: http://localhost:5020
+INFO  2024-03-09 16:10:24 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Application started. Press Ctrl+C to shut down.
+INFO  2024-03-09 16:10:24 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Hosting environment: Development
+INFO  2024-03-09 16:10:24 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Content root path: C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas
+INFO  2024-03-09 16:10:55 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (183ms) [Parameters=[@__usuario_Email_0='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__usuario_Email_0
+INFO  2024-03-09 16:10:55 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (7ms) [Parameters=[@__credencialesUsuario_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__credencialesUsuario_Id_0
+INFO  2024-03-09 16:12:06 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (549ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-09 16:22:48 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: https://localhost:7130
+INFO  2024-03-09 16:22:48 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: http://localhost:5020
+INFO  2024-03-09 16:22:48 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Application started. Press Ctrl+C to shut down.
+INFO  2024-03-09 16:22:48 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Hosting environment: Development
+INFO  2024-03-09 16:22:48 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Content root path: C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas
+INFO  2024-03-09 16:23:19 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (1,903ms) [Parameters=[@__usuario_Email_0='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__usuario_Email_0
+INFO  2024-03-09 16:23:19 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (85ms) [Parameters=[@__credencialesUsuario_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__credencialesUsuario_Id_0
+INFO  2024-03-09 16:23:45 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (400ms) [Parameters=[@__Id_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__Id_Id_0
+INFO  2024-03-09 16:23:45 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (6ms) [Parameters=[@__delete_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__delete_Id_0
+INFO  2024-03-09 16:23:45 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (47ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Cita]
+OUTPUT 1
+WHERE [Id] = @p0;
+INFO  2024-03-09 16:25:46 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: https://localhost:7130
+INFO  2024-03-09 16:25:46 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: http://localhost:5020
+INFO  2024-03-09 16:25:46 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Application started. Press Ctrl+C to shut down.
+INFO  2024-03-09 16:25:46 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Hosting environment: Development
+INFO  2024-03-09 16:25:46 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Content root path: C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas
+INFO  2024-03-09 16:26:16 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (162ms) [Parameters=[@__usuario_Email_0='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__usuario_Email_0
+INFO  2024-03-09 16:26:16 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__credencialesUsuario_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__credencialesUsuario_Id_0
+INFO  2024-03-09 16:27:48 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (251ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-09 16:28:17 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (105ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-09 16:28:18 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-09 16:28:19 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-09 16:28:33 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (317ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
