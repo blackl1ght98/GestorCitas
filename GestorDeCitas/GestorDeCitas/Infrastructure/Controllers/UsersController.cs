@@ -27,10 +27,12 @@ namespace GestorDeCitas.Infrastructure.Controllers
         private readonly IBajaUsuarioServicio _bajaUsuarioServicio;
         private readonly IDeleteUserService _deleteUserService;
         private readonly IChangeUserDataService _changeUserDataService;
+        private readonly IConfiguration _config;
+
         private readonly IActualizacionYEnvioDeCorreoElectronico _actualizacionYEnvioDeCorreoElectronico;
         public UsersController(AgendaCitaContext context, HashService hashService, TokenService tokenService, IEmailService emailService,
             ExistUsersService existUsersService, INewRegister newRegister, IConfirmEmailService confirmEmailService, ILogger<UsersController> logger, IBajaUsuarioServicio bajaUsuarioServicio, IDeleteUserService deleteUserService, IChangeUserDataService changeUserDataService,
-            IActualizacionYEnvioDeCorreoElectronico actualizacionYEnvioDeCorreoElectronico)
+            IActualizacionYEnvioDeCorreoElectronico actualizacionYEnvioDeCorreoElectronico, IConfiguration config)
         {
             _context = context;
             _hashService = hashService;
@@ -44,6 +46,7 @@ namespace GestorDeCitas.Infrastructure.Controllers
             _deleteUserService = deleteUserService;
             _changeUserDataService = changeUserDataService;
             _actualizacionYEnvioDeCorreoElectronico = actualizacionYEnvioDeCorreoElectronico;
+            _config = config;
         }
         [AllowAnonymous]
         [HttpPost("registro")]
@@ -122,9 +125,10 @@ namespace GestorDeCitas.Infrastructure.Controllers
                     UserId = confirmacion.UserId
                 });
 
-               // string loginUrl = _config.GetValue<string>("RedirectUrls:Login");
-                return Ok();
-               // return Redirect(loginUrl);
+                string loginUrl = _config.GetValue<string>("RedirectUrls:Login");
+                //return Ok();
+                return Redirect(loginUrl);
+                // return Redirect(loginUrl);
 
             }
             catch (Exception ex)
