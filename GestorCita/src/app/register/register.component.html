@@ -1,0 +1,36 @@
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="bg-white p-4 rounded shadow animated fadeIn">
+    <h1 class="h2 mb-4 fw-normal text-center">Registrarse</h1>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label fs-5">Email</label>
+      <input type="email" class="form-control fs-5" id="exampleInputEmail1" aria-describedby="emailHelp"
+        [(ngModel)]="datoUsuario.Email" name="Email" required email>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label fs-5">Contraseña</label>
+      <input type="password" class="form-control fs-5" id="exampleInputPassword1" [(ngModel)]="datoUsuario.Password"
+        name="Password" required>
+    </div>
+    <div class="mb-3">
+      <label for="NombreCompleto" class="form-label fs-5">nombre Completo</label>
+      <input type="text" class="form-control fs-5" id="nombreCompleto" [(ngModel)]="datoUsuario.NombreCompleto"
+        name="NombreCompleto" required>
+    </div>
+    <div class="mb-3">
+      <label for="FechaNacimiento" class="form-label fs-5">Fecha de Nacimiento</label>
+      <input type="datetime-local" class="form-control fs-5" id="FechaNacimiento"
+        [(ngModel)]="datoUsuario.FechaNacimiento" name="FechaNacimiento" required>
+    </div>
+    <div class="mb-3">
+      <label for="Telefono" class="form-label fs-5">Telefono</label>
+      <input type="text" class="form-control fs-5" id="telefono" [(ngModel)]="datoUsuario.Telefono" name="Telefono"
+        required>
+    </div>
+    <div class="mb-3">
+      <label for="Direccion" class="form-label fs-5">Direccion</label>
+      <input type="text" class="form-control fs-5" id="Direccion" [(ngModel)]="datoUsuario.Direccion" name="Direccion"
+        required>
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Registrar</button>
+  </form>
+</div>
