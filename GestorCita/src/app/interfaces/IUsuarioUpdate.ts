@@ -5,8 +5,4 @@ export interface IUsuarioUpdate {
   FechaNacimiento: Date;
   Telefono: string;
   Direccion: string;
-  FechaRegistro: Date;
-  cita: string[];
-  insulina: boolean;
-  IdUsuarioNavigation?: any[];
 }

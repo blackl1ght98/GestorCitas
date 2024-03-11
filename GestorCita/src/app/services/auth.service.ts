@@ -39,7 +39,9 @@ export class AuthService {
       .pipe(
         map((response: ILoginResponse) => {
           localStorage.setItem('user', JSON.stringify(response)); // Guardar el objeto completo en el localStorage
-          const token = response.Token; // Extraer el token del objeto de respuesta
+
+          const token = response.token; // Extraer el token del objeto de respuesta
+          console.log('esto es el token: ' + token);
           localStorage.setItem('token', token); // Guardar el token en el localStorage
           this.currentUserSubject.next(response); // Emitir el usuario completo (o solo el token si lo necesitas)
           return response; // Devolver la respuesta completa (opcional)

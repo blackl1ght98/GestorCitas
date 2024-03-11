@@ -35,11 +35,6 @@ export class UsuarioService {
       Authorization: `Bearer ${token}`,
     });
 
-    // Convierte la propiedad medicacion a un array de strings si es necesario
-    // if (typeof usuario.cita === 'string') {
-    //   usuario.cita = [usuario.cita];
-    // }
-
     return this.http
       .patch<IUsuarioUpdate>(
         `${this.API_URL}/Users/cambiardatosusuario`,

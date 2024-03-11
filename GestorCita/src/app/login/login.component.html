@@ -1,1 +1,17 @@
-<p>login works!</p>
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="bg-white p-4 rounded shadow animated fadeIn">
+    <h1 class="h2 mb-4 fw-normal text-center">Login</h1>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label fs-5">Email</label>
+      <input type="email" class="form-control fs-5" id="exampleInputEmail1" aria-describedby="emailHelp"
+        [(ngModel)]="datoLogin.Email" name="Email" required email>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label fs-5">Contraseña</label>
+      <input type="password" class="form-control fs-5" id="exampleInputPassword1" [(ngModel)]="datoLogin.Password"
+        name="Password" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary mb-2">Login</button>
+  </form>
+</div>

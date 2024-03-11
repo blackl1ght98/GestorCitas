@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { CitaComponent } from './cita/cita.component';
+import { CitaComponent } from './formularios/cita/cita.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { MisDatosComponent } from './mis-datos/mis-datos.component';

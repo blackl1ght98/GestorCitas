@@ -1,0 +1,95 @@
+<div class="table-responsive">
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Fecha y hora</th>
+        <th scope="col">Motivo Cita</th>
+        <th scope="col">Ubicacion Cita</th>
+        <th scope="col">Duracion Estimada</th>
+        <th scope="col">Nombre del profesional</th>
+        <th scope="col">Notas adicionales</th>
+        <th scope="col">Estado Cita</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cita of citas; let i = index">
+        <td>{{ cita.FechaYHora }}</td>
+        <td>{{ cita.MotivoCita }}</td>
+        <td>{{ cita.UbicacionCita }}</td>
+        <td>{{ cita.DuracionEstimada }}</td>
+        <td>{{ cita.NombreDelProfesional }}</td>
+        <td>{{ cita.NotasAdicionales }}</td>
+        <td>{{ cita.EstadoCita }}</td>
+
+        <td>
+          <div class="d-flex flex-column">
+            <!-- <button type="button" class="btn btn-danger mb-2" (click)="eliminarCita(citas)">
+              Eliminar Tarea
+            </button> -->
+            <!-- <button type="button" class="btn btn-info mb-2" (click)="editarTarea(tarea)">
+              Editar Tarea
+            </button> -->
+
+            <!-- <button type="button" class="btn btn-info mb-2" (click)="cambiarestadotarea(i)">Realizada</button>
+            <button type="button" class="btn btn-primary mb-2 " (click)="cambiarestadotareaProgreso(i)">Tarea en
+              progreso/Completar Tarea</button> -->
+          </div>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Edicion de la tarea</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div >
+          <h2 class="text-center mt-4">Editar Tarea</h2>
+          <form (ngSubmit)="actualizarTarea(tareaSeleccionada)">
+            <div class="form-group">
+              <label for="editDescripcion">Nueva Descripción:</label>
+              <input type="text" class="form-control" id="editDescripcion" name="editDescripcion"
+                [(ngModel)]="tareaSeleccionada.descripcion" placeholder="Inserte la nueva descripción" required>
+            </div>
+
+            <div class="form-group">
+              <label for="editCategoria">Nueva Categoría:</label>
+              <input type="text" class="form-control" id="editCategoria" name="editCategoria"
+                [(ngModel)]="tareaSeleccionada.categoria" placeholder="Inserte la nueva categoría" required>
+            </div>
+
+            <div class="form-group form-check">
+              <input class="form-check-input" type="checkbox" id="editRealizada" name="editRealizada"
+                [(ngModel)]="tareaSeleccionada.realizada">
+              <label class="form-check-label" for="editRealizada">
+                Tarea Realizada
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label for="editFecha">Nueva Fecha:</label>
+              <input type="datetime-local" class="form-control" id="editFecha" name="editFecha"
+                [(ngModel)]="tareaSeleccionada.fecha" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-3">Guardar Cambios</button>
+          </form>
+        </div>
+        <p *ngIf="edicionExitosa" class="alert alert-success" role="alert">La edicion se ha realizado con exito</p>
+        <p *ngIf="errorEdicion" class="text-danger alert alert-danger" role="alert">{{ errorEdicion }}</p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary .modal-close" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div> -->
