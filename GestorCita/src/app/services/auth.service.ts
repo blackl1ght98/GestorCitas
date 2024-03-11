@@ -42,6 +42,8 @@ export class AuthService {
 
           const token = response.token; // Extraer el token del objeto de respuesta
           console.log('esto es el token: ' + token);
+          const Id = response.id.toString();
+          localStorage.setItem('id', Id);
           localStorage.setItem('token', token); // Guardar el token en el localStorage
           this.currentUserSubject.next(response); // Emitir el usuario completo (o solo el token si lo necesitas)
           return response; // Devolver la respuesta completa (opcional)

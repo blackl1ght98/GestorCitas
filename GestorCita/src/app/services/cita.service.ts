@@ -11,6 +11,18 @@ export class CitaService {
   private API_URL = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
+  getCitaPorId(userId: number): Observable<any> {
+    const token = localStorage.getItem('token');
+    console.log('esto es el token: ' + token);
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`,
+    });
+    return this.http.get<any>(
+      `${this.API_URL}/Cita/getcitaporidusuario/${userId}`,
+      { headers: headers }
+    );
+  }
   postCita(cita: ICita): Observable<ICita> {
     const token = localStorage.getItem('token');
     console.log('esto es el token: ' + token);

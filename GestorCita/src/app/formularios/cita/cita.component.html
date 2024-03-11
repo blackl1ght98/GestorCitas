@@ -4,39 +4,39 @@
     <div class="mb-3">
       <label for="FechaYHora" class="form-label fs-5">Fecha Y Hora</label>
       <input type="datetime-local" class="form-control fs-5" id="FechaYHora" aria-describedby="emailHelp"
-        [(ngModel)]="datocita.FechaYHora" name="FechaYHora" required email>
+        [(ngModel)]="datocita.fechaYhora" name="FechaYHora" required email>
     </div>
     <div class="mb-3">
       <label for="MotivoCita" class="form-label fs-5">Motivo Cita</label>
-      <input type="text" class="form-control fs-5" id="Motivo Cita" [(ngModel)]="datocita.MotivoCita" name="MotivoCita"
+      <input type="text" class="form-control fs-5" id="Motivo Cita" [(ngModel)]="datocita.motivoCita" name="MotivoCita"
         required>
     </div>
     <div class="mb-3">
       <label for="UbicacionCita" class="form-label fs-5">Ubicacion Cita</label>
-      <input type="text" class="form-control fs-5" id="UbicacionCita" [(ngModel)]="datocita.UbicacionCita"
+      <input type="text" class="form-control fs-5" id="UbicacionCita" [(ngModel)]="datocita.ubicacionCita"
         name="UbicacionCita" required>
     </div>
     <div class="mb-3">
       <label for="DuracionEstimada" class="form-label fs-5">Duracion Estimada</label>
-      <input type="text" class="form-control fs-5" id="DuracionEstimada" [(ngModel)]="datocita.DuracionEstimada"
+      <input type="text" class="form-control fs-5" id="DuracionEstimada" [(ngModel)]="datocita.duracionEstimada"
         name="DuracionEstimada" required>
     </div>
     <div class="mb-3">
       <label for="NombreDelProfesional" class="form-label fs-5">Nombre Del Profesional</label>
-      <input type="text" class="form-control fs-5" id="FechaNacimiento" [(ngModel)]="datocita.NombreDelProfesional"
+      <input type="text" class="form-control fs-5" id="FechaNacimiento" [(ngModel)]="datocita.nombreDelProfesional"
         name="NombreDelProfesional" required>
     </div>
     <div class="mb-3">
       <label for="NotasAdicionales" class="form-label fs-5">Notas Adicionales</label>
-      <input type="text" class="form-control fs-5" id="NotasAdicionales" [(ngModel)]="datocita.NotasAdicionales"
+      <input type="text" class="form-control fs-5" id="NotasAdicionales" [(ngModel)]="datocita.notasAdicionales"
         name="Telefono" required>
     </div>
     <div class="mb-3">
       <label for="EstadoCita" class="form-label fs-5">Estado Cita</label>
-      <input type="text" class="form-control fs-5" id="EstadoCita" [(ngModel)]="datocita.EstadoCita" name="Direccion"
+      <input type="text" class="form-control fs-5" id="EstadoCita" [(ngModel)]="datocita.estadoCita" name="Direccion"
         required>
     </div>
     <button type="submit" class="btn btn-primary mb-2">Agregar</button>
   </form>
 </div>
-<app-tabla-cita></app-tabla-cita>
+<app-tabla-cita [cita]="misCitas"></app-tabla-cita>

@@ -1,9 +1,12 @@
 export interface ICita {
-  FechaYHora: Date;
-  MotivoCita: string;
-  UbicacionCita: string; // Agrega este campo
-  DuracionEstimada: string;
-  NombreDelProfesional: string;
-  NotasAdicionales: string;
-  EstadoCita: string;
+  Id?: number;
+  idUsuario?: number;
+  idUsuarioNavigation?: null;
+  fechaYhora: Date;
+  motivoCita: string;
+  ubicacionCita: string; // Agrega este campo
+  duracionEstimada: string;
+  nombreDelProfesional: string;
+  notasAdicionales: string;
+  estadoCita: string;
 }
