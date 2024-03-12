@@ -1,5 +1,10 @@
 <div class="table-responsive">
 
+  <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+    Para eliminar una cita recién creada, hagan clic en <button id="reloadBtn" class="btn btn-link "
+      (click)="reloadPage()">Actualizar
+      Página</button>
+  </div>
 
   <table class="table">
 
@@ -16,14 +21,14 @@
     </thead>
     <tbody>
       <tr *ngFor="let citaIndividual  of cita; let i = index; ">
-        <td>{{ citaIndividual.fechaYhora | date:'dd/MM/YYY' }}</td>
+        <td>{{ citaIndividual.fechaYhora | date:'dd/MM/yyyy, HH:mm' }}</td>
         <td>{{ citaIndividual.motivoCita }}</td>
         <td>{{ citaIndividual.ubicacionCita }}</td>
         <td>{{ citaIndividual.duracionEstimada }}</td>
         <td>{{ citaIndividual.nombreDelProfesional }}</td>
         <td>{{ citaIndividual.notasAdicionales }}</td>
         <td>{{ citaIndividual.estadoCita }}</td>
-
+        <button (click)="eliminarCita(citaIndividual.id!)">Eliminar</button>
         <td>
 
           <div class="d-flex flex-column">

@@ -25,15 +25,23 @@ export class CitaComponent implements OnInit {
     estadoCita: '',
   };
   ngOnInit(): void {
+    this.citaService.citas$.subscribe((citas) => {
+      this.misCitas = citas;
+    });
     this.ObtenerCita();
   }
+
   misCitas: ICita[] = [];
+  mostrarMensajeActualizar = false;
+
   constructor(private router: Router, private citaService: CitaService) {}
   onSubmit(form: NgForm) {
     this.citaService.postCita(this.datocita).subscribe({
       next: (res) => {
         console.log(res);
-        this.router.navigate(['/mis-datos']);
+
+        this.ObtenerCita();
+        // Recargar la página solo si la operación es exitosa
       },
       error: (err) => {
         console.log(err);
@@ -42,6 +50,7 @@ export class CitaComponent implements OnInit {
 
     // Formulario inválido, mostrar mensajes de validación si es necesario
   }
+
   ObtenerCita() {
     const idStr = localStorage.getItem('id'); // Obtener la ID como cadena desde el localStorage
     const idNum = parseInt(idStr!, 10); // Convertir la cadena a número usando parseInt()

@@ -41,7 +41,7 @@ namespace GestorDeCitas.Infrastructure.Controllers
                 {
                     if (existeUsuario == null)
                     {
-                        return NotFound("La persona a la que intenta poner la medicion no existe");
+                        return NotFound("La persona a la que intenta poner la cita no existe");
                     }
                     //Llamamos al servicio medicion que contiene el metodo NuevaMedicion este metodo necesita un 
                     //DTOMediciones que contiene los datos necesarios para agregar la medicion a esa persona
@@ -97,7 +97,7 @@ namespace GestorDeCitas.Infrastructure.Controllers
 
                 if (citaExist == null)
                 {
-                    return BadRequest("La medicion que intenta eliminar no se encuentra");
+                    return BadRequest("La cita que intenta eliminar no se encuentra");
                 }
 
 
@@ -119,8 +119,8 @@ namespace GestorDeCitas.Infrastructure.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al procesar el borrado de la medición");
-                return BadRequest("En estos momentos no se ha podido realizar la ieliminación de la medición, por favor, intentelo más tarde.");
+                _logger.LogError(ex, "Error al procesar el borrado de la cita");
+                return BadRequest("En estos momentos no se ha podido realizar la ieliminación de la cita, por favor, intentelo más tarde.");
 
             }
 
@@ -153,8 +153,8 @@ namespace GestorDeCitas.Infrastructure.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al procesar la solicitud de las  mediciones");
-                return BadRequest("En estos momentos no se ha podido consultar los datos de la persona, por favor, intentelo más tarde.");
+                _logger.LogError(ex, "Error al procesar la solicitud de las  citas");
+                return BadRequest("En estos momentos no se ha podido consultar los datos de la cita, por favor, intentelo más tarde.");
             }
 
         }

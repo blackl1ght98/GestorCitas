@@ -1,5 +1,5 @@
 export interface ICita {
-  Id?: number;
+  id?: number;
   idUsuario?: number;
   idUsuarioNavigation?: null;
   fechaYhora: Date;

@@ -12,9 +12,14 @@ import { CitaService } from '../../services/cita.service';
 })
 export class TablaCitaComponent implements OnInit {
   @Input() cita: ICita[] = [];
-  @Output() citaSeleccionada: EventEmitter<ICita> = new EventEmitter<ICita>();
+  citas: ICita[] = [];
   constructor(private citaService: CitaService) {}
+  mostrarMensajeActualizar = false;
   ngOnInit(): void {
+    this.citaService.citas$.subscribe((citas) => {
+      this.citas = citas;
+      // No necesitas asignar citas a this.cita aquí, ya que lo haces en el template
+    });
     this.ObtenerCita();
   }
   ObtenerCita() {
@@ -44,7 +49,21 @@ export class TablaCitaComponent implements OnInit {
       );
     }
   }
-  seleccionarCita(cita: ICita) {
-    this.citaSeleccionada.emit(cita);
+  reloadPage() {
+    this.mostrarMensajeActualizar = true;
+    location.reload();
+  }
+  eliminarCita(idCita: number) {
+    this.citaService.deleteCita(idCita).subscribe({
+      next: (response) => {
+        // Imprimir la respuesta del servidor
+        console.log(response);
+        // Actualizar la lista de citas
+        this.ObtenerCita();
+      },
+      error: (error) => {
+        console.error('Error al eliminar la cita:', error);
+      },
+    });
   }
 }
