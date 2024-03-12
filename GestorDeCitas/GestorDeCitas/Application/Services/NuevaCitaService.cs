@@ -39,7 +39,7 @@ namespace DiabetesNoteBook.Application.Services
                    NombreDelProfesional=cita.NombreDelProfesional,
                    NotasAdicionales=cita.NotasAdicionales,
                    EstadoCita=cita.EstadoCita,
-                    IdUsuario = id
+                   IdUsuario = id
 
                 };
                 //Llamamos al servicio para que la guarde

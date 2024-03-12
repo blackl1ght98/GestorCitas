@@ -4,6 +4,7 @@ using GestorDeCitas.Domain.Models;
 using GestorDeCitas.Infrastructure.Interfaces;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace DiabetesNoteBook.Application.Services
 {
@@ -12,14 +13,15 @@ namespace DiabetesNoteBook.Application.Services
     public class ChangeUserDataService : IChangeUserDataService
     {
         private readonly AgendaCitaContext _context;
-       
+       private readonly IHttpContextAccessor _httpContextAccessor;
         
 		//Creamos el constructor
 
-		public ChangeUserDataService(AgendaCitaContext context 
+		public ChangeUserDataService(AgendaCitaContext context, IHttpContextAccessor httpContextAccessor
             )
         {
             _context = context;
+            _httpContextAccessor = httpContextAccessor;
             
           
           
@@ -31,24 +33,30 @@ namespace DiabetesNoteBook.Application.Services
         {
             try
             {
-				//Como hemos implementado la separacion de responsabilidades ahora la logica de este get
-				//se encuentra en la carpeta repositories-->GetOperations-->UserMedicationRetrieval.cs
-				//var usuarioUpdate = await _userMedicationRetrieval.GetUserWithMedications(changeUserData.Id);
+                //Como hemos implementado la separacion de responsabilidades ahora la logica de este get
+                //se encuentra en la carpeta repositories-->GetOperations-->UserMedicationRetrieval.cs
+                //var usuarioUpdate = await _userMedicationRetrieval.GetUserWithMedications(changeUserData.Id);
                 // Buscar el usuario en la base de datos por su ID
-                var usuarioUpdate = await _context.Usuarios.AsTracking().FirstOrDefaultAsync(x => x.Id == changeUserData.Id);
-                if (usuarioUpdate != null)
-                {  
-					
-					
-					usuarioUpdate.NombreCompleto = changeUserData.NombreCompleto;
-					usuarioUpdate.Email = changeUserData.Email;
-                    usuarioUpdate.FechaNacimiento=changeUserData.FechaNacimiento;
-                    usuarioUpdate.Telefono= changeUserData.Telefono;
-                    usuarioUpdate.Direccion=changeUserData.Direccion;
-                    _context.Usuarios.Update(usuarioUpdate);
-                    await _context.SaveChangesAsync();
-			
+                var userId = _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+                int id;
+                if (int.TryParse(userId, out id))
+                {
+                    var usuarioUpdate = await _context.Usuarios.AsTracking().FirstOrDefaultAsync(x => x.Id == id);
+                    if (usuarioUpdate != null)
+                    {
+
+                        usuarioUpdate.Id = id;
+                        usuarioUpdate.NombreCompleto = changeUserData.NombreCompleto;
+                        usuarioUpdate.Email = changeUserData.Email;
+                        usuarioUpdate.FechaNacimiento = changeUserData.FechaNacimiento;
+                        usuarioUpdate.Telefono = changeUserData.Telefono;
+                        usuarioUpdate.Direccion = changeUserData.Direccion;
+                        _context.Usuarios.Update(usuarioUpdate);
+                        await _context.SaveChangesAsync();
+
+                    }
                 }
+                  
             }
             catch
             {

@@ -26,7 +26,6 @@ export class UsuarioService {
   }
   actualizarUsuario(usuario: IUsuarioUpdate): Observable<IUsuarioUpdate> {
     const token = localStorage.getItem('token');
-    console.log('esto es el token: ' + token);
     // Verifica si el token está presente en el localStorage
 
     // Configura el encabezado de autorización con el token

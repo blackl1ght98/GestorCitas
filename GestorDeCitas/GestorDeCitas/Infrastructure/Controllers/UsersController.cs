@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 using static Org.BouncyCastle.Math.EC.ECCurve;
 
 namespace GestorDeCitas.Infrastructure.Controllers
@@ -89,12 +90,12 @@ namespace GestorDeCitas.Infrastructure.Controllers
 
 
 
-                return Ok();
+                return Ok(new {message="Registro realizado con exito"});
             }
             catch (Exception ex)
             {
                _logger.LogError(ex, "Error al procesar el registro");
-                return BadRequest("En estos momentos no se ha podido realizar le registro, por favor, intentelo más tarde.");
+                return BadRequest( new { message = "En estos momentos no se ha podido realizar le registro, por favor, intentelo más tarde." });
             }
 
         }
@@ -127,7 +128,7 @@ namespace GestorDeCitas.Infrastructure.Controllers
 
                 string loginUrl = _config.GetValue<string>("RedirectUrls:Login");
                 //return Ok();
-                return Redirect(loginUrl);
+                return Redirect("http://localhost:4200/login");
                 // return Redirect(loginUrl);
 
             }
@@ -224,12 +225,12 @@ namespace GestorDeCitas.Infrastructure.Controllers
 
                 //Si todo ha ido bien se devuelve un ok.
 
-                return Ok();
+                return Ok(new {message="Baja realizada con exito"});
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error al procesar de baja");
-                return BadRequest("En estos momentos no se ha podido dar de baja el usuario, por favor, intentelo más tarde.");
+                return BadRequest( new { message = "En estos momentos no se ha podido dar de baja el usuario, por favor, intentelo más tarde." });
             }
 
 
@@ -278,12 +279,12 @@ namespace GestorDeCitas.Infrastructure.Controllers
 
                 //Si todo ha ido bien devolvemos un ok.
 
-                return Ok();
+                return Ok(new { message = "Datos eliminados con exito" });
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error al procesar de eliminación de usuario");
-                return BadRequest("En estos momentos no se ha podido eliminar el usuario, por favor, intentelo más tarde.");
+                return BadRequest( new { message = "En estos momentos no se ha podido eliminar el usuario, por favor, intentelo más tarde." });
             }
 
         }
@@ -293,6 +294,7 @@ namespace GestorDeCitas.Infrastructure.Controllers
 
             try
             {
+
                 var userExist = await _existUsersService.UserExistById(userData.Id);
 
                 //Buscamos en base de datos si el usuario existe en base a su id
@@ -326,6 +328,7 @@ namespace GestorDeCitas.Infrastructure.Controllers
             }
 
         }
+        [Authorize]
         [HttpPatch("cambiardatosusuario")]
         public async Task<ActionResult> UserPUT([FromBody] DTOChangeUserData userData)
         {
@@ -335,58 +338,50 @@ namespace GestorDeCitas.Infrastructure.Controllers
                 //Se busca en base de datos si el usuario existe en base a su id
                 //var usuarioUpdate = await _context.Usuarios.AsTracking().FirstOrDefaultAsync(x => x.Id == userData.Id);
                 //var usuarioUpdate = _usuarioPorId.ObtenerUsuarioPorId(userData.Id);
-                var userExist = await _existUsersService.UserExistById(userData.Id);
 
-            
-                await _changeUserDataService.ChangeUserData(new DTOChangeUserData
+                //var userExist = await _existUsersService.UserExistById(userData.Id);
+
+                var existeUsuario = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                int usuarioId;
+                if (int.TryParse(existeUsuario, out usuarioId))
                 {
-                    Id = userData.Id,
-                    Email = userData.Email,
-                    FechaNacimiento=userData.FechaNacimiento,
-                    NombreCompleto = userData.NombreCompleto,
-                    Telefono= userData.Telefono,
-                    Direccion=userData.Direccion,
+                    if (usuarioId == null)
+                    {
+                        return BadRequest("Usuario no encontrado");
+                    }
 
-                });
+                    await _changeUserDataService.ChangeUserData(new DTOChangeUserData
+                    {
+                        //Id = usuarioId,
+                        Email = userData.Email,
+                        FechaNacimiento = userData.FechaNacimiento,
+                        NombreCompleto = userData.NombreCompleto,
+                        Telefono = userData.Telefono,
+                        Direccion = userData.Direccion,
 
-                //// Actualizar email del usuario
-                //var usuarioActualizado = await _context.Usuarios.AsTracking().FirstOrDefaultAsync(x => x.Id == userData.Id);
+                    });
 
-                //var usuarioActualizado = _usuarioPorId.ObtenerUsuarioPorId(userData.Id);
-                //if (usuarioActualizado != null && usuarioActualizado.Email != userData.Email)
-                //{
 
-                //	usuarioActualizado.ConfirmacionEmail = false;
-                //	usuarioActualizado.Email = userData.Email;
-                //	_context.Usuarios.Update(usuarioActualizado);
-                //	await _context.SaveChangesAsync();
-                //	await _emailService.SendEmailAsyncRegister(new DTOEmail
-                //                {
-                //                    ToEmail = userData.Email
-                //                });
-                //            }
-                //            else
-                //{
-                //                usuarioUpdate.Email = userData.Email;
-                //            }
-                var emailActualizado = await _actualizacionYEnvioDeCorreoElectronico.ActualizarEmailUsuario(userData.Id, userData.Email);
-                if (emailActualizado)
-                {
-                    await _actualizacionYEnvioDeCorreoElectronico.EnviarCorreoElectronico(userData.Email);
+                    var emailActualizado = await _actualizacionYEnvioDeCorreoElectronico.ActualizarEmailUsuario(usuarioId, userData.Email);
+                    if (emailActualizado)
+                    {
+                        await _actualizacionYEnvioDeCorreoElectronico.EnviarCorreoElectronico(userData.Email);
+                    }
+                    else
+                    {
+                        return BadRequest("El email no puede ser el mismo si lo va a cambiar");
+                    }
                 }
-                else
-                {
-                    return BadRequest("El email no puede ser el mismo si lo va a cambiar");
-                }
+                   
 
 
 
-                return Ok("Datos actualizados con exito");
+                return Ok(new { message = "Datos actualizados con exito" });
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error al procesar de eliminación actualización de usuario");
-                return BadRequest("En estos momentos no se ha podido actualizar el usuario, por favor, intentelo más tarde.");
+                return BadRequest(new { message = "En estos momentos no se ha podido actualizar el usuario, por favor, intentelo más tarde." });
             }
 
 

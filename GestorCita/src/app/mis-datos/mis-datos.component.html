@@ -1,1 +1,42 @@
-<p>mis-datos works!</p>
+<div class="container-fluid d-flex align-items-center justify-content-center" style="height: 100vh;">
+  <div class="row w-100">
+    <div class="col-12">
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="p-4 rounded bg-dark text-white"
+        style="font-family: Arial, sans-serif;">
+        <h1 class="h3 mb-4 fw-normal text-center">Cambiar datos Usuario</h1>
+        <div class="mb-3">
+          <label for="email" class="form-label fs-6">Email</label>
+          <input type="email" class="form-control fs-6" id="email" aria-describedby="emailHelp"
+            [(ngModel)]="datoUsuario.email" name="email" required email>
+        </div>
+        <div class="mb-3">
+          <label for="nombreCompleto" class="form-label fs-6">Nombre completo</label>
+          <input type="text" class="form-control fs-6" id="nombreCompleto" [(ngModel)]="datoUsuario.nombreCompleto"
+            name="nombreCompleto" required>
+        </div>
+        <div class="mb-3">
+          <label for="fechaNacimiento" class="form-label fs-6">fecha Nacimiento</label>
+          <input type="datetime-local" class="form-control fs-6" id="fechaNacimiento"
+            [(ngModel)]="datoUsuario.fechaNacimiento" name="fechaNacimiento" required>
+        </div>
+        <div class="mb-3">
+          <label for="telefono" class="form-label fs-6">Telefono</label>
+          <input type="text" class="form-control fs-6" id="telefono" [(ngModel)]="datoUsuario.telefono" name="telefono"
+            required>
+        </div>
+        <div class="mb-3">
+          <label for="direccion" class="form-label fs-6">Direccion</label>
+          <input type="text" class="form-control fs-6" id="direccion" [(ngModel)]="datoUsuario.direccion"
+            name="direccion" required>
+        </div>
+        <div class="container-fluid">
+          <!-- Agregar esta alerta de Bootstrap -->
+          <div *ngIf="actualizacionExitosa" class="alert alert-success" role="alert">
+            ¡Actualización exitosa!
+          </div>
+          <button type="submit" class="btn btn-light mb-2 w-100">Actualizar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

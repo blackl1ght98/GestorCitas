@@ -41,7 +41,6 @@ export class AuthService {
           localStorage.setItem('user', JSON.stringify(response)); // Guardar el objeto completo en el localStorage
 
           const token = response.token; // Extraer el token del objeto de respuesta
-          console.log('esto es el token: ' + token);
           const Id = response.id.toString();
           localStorage.setItem('id', Id);
           localStorage.setItem('token', token); // Guardar el token en el localStorage

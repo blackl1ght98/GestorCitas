@@ -1,8 +1,7 @@
 export interface IUsuarioUpdate {
-  Email: string;
-  Password: string;
-  NombreCompleto: string;
-  FechaNacimiento: Date;
-  Telefono: string;
-  Direccion: string;
+  email: string;
+  nombreCompleto: string;
+  fechaNacimiento: Date;
+  telefono: string;
+  direccion: string;
 }

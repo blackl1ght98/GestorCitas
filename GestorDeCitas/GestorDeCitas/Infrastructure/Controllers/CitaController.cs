@@ -68,7 +68,7 @@ namespace GestorDeCitas.Infrastructure.Controllers
 
                 }
 
-                return Ok("Cita guardada con exito ");
+                return Ok(new { message = "Cita guardada con exito " });
 
 
             }
@@ -76,7 +76,7 @@ namespace GestorDeCitas.Infrastructure.Controllers
             {
 
                 _logger.LogError(ex, "Error al procesar la nueva cita");
-                return BadRequest("En estos momentos no se ha podido realizar la insercción de la cita, por favor, intentelo más tarde.");
+                return BadRequest(new { message = "En estos momentos no se ha podido realizar la insercción de la cita, por favor, intentelo más tarde." });
             }
 
         }
@@ -115,12 +115,12 @@ namespace GestorDeCitas.Infrastructure.Controllers
 
                 //Devolvemos un ok si todo va bien
 
-                return Ok("Eliminacion realizada con exito");
+                return Ok(new { message = "Eliminacion realizada con exito" });
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error al procesar el borrado de la cita");
-                return BadRequest("En estos momentos no se ha podido realizar la ieliminación de la cita, por favor, intentelo más tarde.");
+                return BadRequest(new { message = "En estos momentos no se ha podido realizar la ieliminación de la cita, por favor, intentelo más tarde." });
 
             }
 
@@ -154,7 +154,7 @@ namespace GestorDeCitas.Infrastructure.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error al procesar la solicitud de las  citas");
-                return BadRequest("En estos momentos no se ha podido consultar los datos de la cita, por favor, intentelo más tarde.");
+                return BadRequest(new { message = "En estos momentos no se ha podido consultar los datos de la cita, por favor, intentelo más tarde." });
             }
 
         }

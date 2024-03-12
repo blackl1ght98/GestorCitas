@@ -4,7 +4,7 @@ namespace GestorDeCitas.Application.DTOs
 {
     public class DTOChangeUserData
     {
-        public int Id { get; set; }
+        //public int Id { get; set; }
   
         public string NombreCompleto { get; set; }
       
