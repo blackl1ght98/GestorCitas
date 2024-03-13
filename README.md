@@ -1,4 +1,4 @@
-##Frontend
+Frontend
 
 El frontend de la aplicación está desarrollado con el popular framework Angular. Este proporciona una interfaz de usuario rica y dinámica, permitiendo a los usuarios interactuar con la aplicación de manera eficiente. Las características clave del frontend incluyen:
 
@@ -7,8 +7,7 @@ El frontend de la aplicación está desarrollado con el popular framework Angula
     Recuperación de contraseña: Si un usuario olvida su contraseña, puede solicitar un correo electrónico de recuperación para restablecerla.
     Cambio de contraseña: Los usuarios pueden cambiar su contraseña después de iniciar sesión en la aplicación.
     Gestión de citas: Los usuarios pueden agregar y eliminar citas según sus necesidades.
-
-##Backend
+Backend
 
 El backend de la aplicación está construido con .NET 7.0, un marco de trabajo robusto y escalable que permite el desarrollo de aplicaciones de alto rendimiento. Las funcionalidades principales del backend incluyen:
 
