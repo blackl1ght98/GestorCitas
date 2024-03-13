@@ -66,12 +66,12 @@ namespace GestorDeCitas.Infrastructure.Controllers
 
                 //Si todo va bien se devuelve un ok
 
-                return Ok("Password cambiado con exito");
+                return Ok( new { message = "Password cambiado con exito" });
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error al procesar al cambiar la contraseña");
-                return BadRequest("En estos momentos no se ha podido realizar el cambio de contraseña, por favor, intentelo más tarde.");
+                return BadRequest(new { message = "En estos momentos no se ha podido realizar el cambio de contraseña, por favor, intentelo más tarde." });
             }
 
         }
@@ -103,16 +103,16 @@ namespace GestorDeCitas.Infrastructure.Controllers
                         ToEmail = usuario.Email
                     });
 
-                    return Ok("Se enviaron las instrucciones a tu correo para restablecer la contraseña. Recuerda revisar la bandeja de Spam.");
+                    return Ok(new { message = "Se enviaron las instrucciones a tu correo para restablecer la contraseña. Recuerda revisar la bandeja de Spam." });
 
                 }
-
-                return BadRequest("Email no encontrado.");
+                //return Redirect("http://localhost:4200/recover-pass");
+                return BadRequest(new { message = "Email no encontrado." });
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error al procesar el envio de instrucciones");
-                return BadRequest("En este momento no puedo enviar las intrucciones, intentalo más tarde por favor.");
+                return BadRequest(new { message = "En este momento no puedo enviar las intrucciones, intentalo más tarde por favor." });
             }
         }
         [AllowAnonymous]
@@ -148,21 +148,21 @@ namespace GestorDeCitas.Infrastructure.Controllers
                     });
                     //Si todo ha ido bien devuelve un ok
 
-                    return Ok("Password cambiado con exito");
+                    return Ok(new { message = "Password cambiado con exito" });
                 }
                 //Se agrega la operacion
 
 
                 //Si el token a caducado o no existe muestra este mensaje
 
-                return Ok("El token no existe o ha caducado.");
+                return Ok(new { message = "El token no existe o ha caducado." });
 
             }
             catch (Exception ex)
             {
                 //Este mensaje se muestra si ocurreo algun otro error con el servidor
                 _logger.LogError(ex + "Error al procesar el reset del email.");
-                return BadRequest("En este momento no se puede actualizar tu contraseña, intentelo más tarde por favor.");
+                return BadRequest(new { message = "En este momento no se puede actualizar tu contraseña, intentelo más tarde por favor." });
             }
         }
     }

@@ -102,16 +102,16 @@ namespace GestorDeCitas.Application.Services
 			textoEnlace = textoEnlace.Replace("=", "").Replace("+", "").Replace("/", "").Replace("?", "").Replace("&", "").Replace("!", "").Replace("¡", "");
 			usuarioDB.EnlaceCambioPass = textoEnlace;
 			usuarioDB.FechaEnlaceCambioPass = fecha;
-            string urlToRedirect = $"http://localhost:4200/shared/recover-pass/{textoEnlace}";
+            string urlToRedirect = $"http://localhost:4200/recover-pass/{textoEnlace}";
             string encodedUrlToRedirect = System.Net.WebUtility.UrlEncode(urlToRedirect);
 
             var model = new DTOEmail
 			{
-                //RecoveryLink = $"http://localhost:4200/shared/recover-pass/{usuarioDB.EnlaceCambioPass}",
+                RecoveryLink = $"http://localhost:4200/recover-pass/{usuarioDB.EnlaceCambioPass}",
 
                 //RecoveryLink = $"http://localhost:4200/shared/recover-pass/{textoEnlace}",
                 //RecoveryLink = $"{_httpContextAccessor.HttpContext.Request.Scheme}://{_httpContextAccessor.HttpContext.Request.Host}/shared/recover-pass/{textoEnlace}?redirect=true",
-                RecoveryLink = $"{_httpContextAccessor.HttpContext.Request.Scheme}://{_httpContextAccessor.HttpContext.Request.Host}/shared/recover-pass/{textoEnlace}?redirect=true&url={encodedUrlToRedirect}"
+                //RecoveryLink = $"{_httpContextAccessor.HttpContext.Request.Scheme}://{_httpContextAccessor.HttpContext.Request.Host}/recover-pass/{textoEnlace}?redirect=true&url={encodedUrlToRedirect}"
             };
 
 			await _newStringGuid.SaveNewStringGuid(usuarioDB);

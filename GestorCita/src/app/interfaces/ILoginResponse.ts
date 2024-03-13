@@ -14,12 +14,12 @@ export interface ILogin {
   Password: string;
 }
 export interface IChangePass {
-  Id: number;
-  NewPass: string;
+  id: number;
+  newPass: string;
 }
 export interface IRecoverPass {
-  Token: string;
-  NewPass: string;
+  token: string;
+  newPass: string;
 }
 
 export interface IUserLogout {

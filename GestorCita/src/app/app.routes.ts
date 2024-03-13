@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { MisDatosComponent } from './mis-datos/mis-datos.component';
 import { AuthGuard } from './guard/auth.guard';
+import { RecoverPassComponent } from './recover-pass/recover-pass.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -13,4 +14,5 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegisterComponent },
   { path: 'mis-datos', component: MisDatosComponent, canActivate: [AuthGuard] },
+  { path: 'recover-pass/:token', component: RecoverPassComponent },
 ];

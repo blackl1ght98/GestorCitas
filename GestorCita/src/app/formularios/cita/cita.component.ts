@@ -38,7 +38,7 @@ export class CitaComponent implements OnInit {
   onSubmit(form: NgForm) {
     this.citaService.postCita(this.datocita).subscribe({
       next: (res) => {
-        console.log(res);
+        console.log('id user', res.idUsuario);
 
         this.ObtenerCita();
         // Recargar la página solo si la operación es exitosa

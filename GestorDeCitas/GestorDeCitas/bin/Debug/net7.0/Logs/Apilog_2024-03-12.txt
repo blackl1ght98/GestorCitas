@@ -39825,3 +39825,740 @@ SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c]
 FROM [Cita] AS [c]
 INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
 WHERE [c].[Id_Usuario] = @__userExist_Id_0
+INFO  2024-03-12 21:00:44 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: https://localhost:7130
+INFO  2024-03-12 21:00:44 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Now listening on: http://localhost:5020
+INFO  2024-03-12 21:00:44 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Application started. Press Ctrl+C to shut down.
+INFO  2024-03-12 21:00:44 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Hosting environment: Development
+INFO  2024-03-12 21:00:44 – Clase: Microsoft.Hosting.Lifetime - Mensaje: Content root path: C:\Users\guill\OneDrive\Escritorio\Glucontrol NO BORRAR\Resultado final DiabetesNoteBook\GestorDeCitas\GestorDeCitas
+INFO  2024-03-12 21:03:38 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (278ms) [Parameters=[@__usuario_Email_0='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Email] = @__usuario_Email_0
+INFO  2024-03-12 21:03:38 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (6ms) [Parameters=[@__credencialesUsuario_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__credencialesUsuario_Id_0
+INFO  2024-03-12 21:03:38 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__id_0
+INFO  2024-03-12 21:03:38 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (6ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:03:38 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__userExist_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita], [u].[Id], [u].[BajaUsuario], [u].[ConfirmacionEmail], [u].[Direccion], [u].[Email], [u].[EnlaceCambioPass], [u].[FechaEnlaceCambioPass], [u].[FechaNacimiento], [u].[FechaRegistro], [u].[NombreCompleto], [u].[Password], [u].[Rol], [u].[Salt], [u].[Telefono]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [c].[Id_Usuario] = @__userExist_Id_0
+INFO  2024-03-12 21:03:50 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (30ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:03:50 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (11ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:04:05 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (158ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-12 21:04:05 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (5ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:04:19 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__Id_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__Id_Id_0
+INFO  2024-03-12 21:04:19 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__delete_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__delete_Id_0
+INFO  2024-03-12 21:04:19 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (17ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Cita]
+OUTPUT 1
+WHERE [Id] = @p0;
+INFO  2024-03-12 21:04:19 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:04:35 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (14ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-12 21:04:35 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (12ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:04:37 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__Id_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__Id_Id_0
+INFO  2024-03-12 21:04:37 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__delete_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__delete_Id_0
+INFO  2024-03-12 21:04:37 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Cita]
+OUTPUT 1
+WHERE [Id] = @p0;
+INFO  2024-03-12 21:04:37 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:04:44 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-12 21:04:44 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:04:46 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__Id_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__Id_Id_0
+INFO  2024-03-12 21:04:46 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (1ms) [Parameters=[@__delete_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__delete_Id_0
+INFO  2024-03-12 21:04:46 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Cita]
+OUTPUT 1
+WHERE [Id] = @p0;
+INFO  2024-03-12 21:04:46 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:04:54 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-12 21:04:54 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:04:56 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__Id_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__Id_Id_0
+INFO  2024-03-12 21:04:56 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__delete_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__delete_Id_0
+INFO  2024-03-12 21:04:56 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Cita]
+OUTPUT 1
+WHERE [Id] = @p0;
+INFO  2024-03-12 21:04:56 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:21 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (50ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-12 21:09:21 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:22 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-12 21:09:22 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:22 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-12 21:09:22 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:22 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-12 21:09:22 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:23 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-12 21:09:23 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:23 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (7ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-12 21:09:23 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:23 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-12 21:09:23 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (7ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:25 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__Id_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__Id_Id_0
+INFO  2024-03-12 21:09:25 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (1ms) [Parameters=[@__delete_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__delete_Id_0
+INFO  2024-03-12 21:09:25 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Cita]
+OUTPUT 1
+WHERE [Id] = @p0;
+INFO  2024-03-12 21:09:25 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:26 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__Id_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__Id_Id_0
+INFO  2024-03-12 21:09:26 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__delete_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__delete_Id_0
+INFO  2024-03-12 21:09:26 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Cita]
+OUTPUT 1
+WHERE [Id] = @p0;
+INFO  2024-03-12 21:09:27 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:28 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__Id_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__Id_Id_0
+INFO  2024-03-12 21:09:28 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__delete_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__delete_Id_0
+INFO  2024-03-12 21:09:28 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Cita]
+OUTPUT 1
+WHERE [Id] = @p0;
+INFO  2024-03-12 21:09:28 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:29 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@__Id_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__Id_Id_0
+INFO  2024-03-12 21:09:29 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__delete_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__delete_Id_0
+INFO  2024-03-12 21:09:29 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Cita]
+OUTPUT 1
+WHERE [Id] = @p0;
+INFO  2024-03-12 21:09:29 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:29 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__Id_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__Id_Id_0
+INFO  2024-03-12 21:09:29 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__delete_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__delete_Id_0
+INFO  2024-03-12 21:09:29 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Cita]
+OUTPUT 1
+WHERE [Id] = @p0;
+INFO  2024-03-12 21:09:29 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:30 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__Id_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__Id_Id_0
+INFO  2024-03-12 21:09:30 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__delete_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__delete_Id_0
+INFO  2024-03-12 21:09:30 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Cita]
+OUTPUT 1
+WHERE [Id] = @p0;
+INFO  2024-03-12 21:09:30 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:30 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__Id_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__Id_Id_0
+INFO  2024-03-12 21:09:30 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__delete_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__delete_Id_0
+INFO  2024-03-12 21:09:30 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Cita]
+OUTPUT 1
+WHERE [Id] = @p0;
+INFO  2024-03-12 21:09:30 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:32 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-12 21:09:32 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:33 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-12 21:09:33 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:34 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__Id_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__Id_Id_0
+INFO  2024-03-12 21:09:34 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__delete_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__delete_Id_0
+INFO  2024-03-12 21:09:34 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Cita]
+OUTPUT 1
+WHERE [Id] = @p0;
+INFO  2024-03-12 21:09:34 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:34 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__Id_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__Id_Id_0
+INFO  2024-03-12 21:09:34 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__delete_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__delete_Id_0
+INFO  2024-03-12 21:09:34 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Cita]
+OUTPUT 1
+WHERE [Id] = @p0;
+INFO  2024-03-12 21:09:34 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:36 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-12 21:09:36 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:36 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-12 21:09:36 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (1ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:36 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-12 21:09:36 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:36 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-12 21:09:36 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (6ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:36 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-12 21:09:36 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:37 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__Id_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__Id_Id_0
+INFO  2024-03-12 21:09:37 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (1ms) [Parameters=[@__delete_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__delete_Id_0
+INFO  2024-03-12 21:09:37 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Cita]
+OUTPUT 1
+WHERE [Id] = @p0;
+INFO  2024-03-12 21:09:37 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (5ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:38 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__Id_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__Id_Id_0
+INFO  2024-03-12 21:09:38 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__delete_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__delete_Id_0
+INFO  2024-03-12 21:09:38 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Cita]
+OUTPUT 1
+WHERE [Id] = @p0;
+INFO  2024-03-12 21:09:38 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:38 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__Id_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__Id_Id_0
+INFO  2024-03-12 21:09:38 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__delete_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__delete_Id_0
+INFO  2024-03-12 21:09:38 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Cita]
+OUTPUT 1
+WHERE [Id] = @p0;
+INFO  2024-03-12 21:09:38 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:44 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__Id_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__Id_Id_0
+INFO  2024-03-12 21:09:44 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__delete_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__delete_Id_0
+INFO  2024-03-12 21:09:44 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Cita]
+OUTPUT 1
+WHERE [Id] = @p0;
+INFO  2024-03-12 21:09:44 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:09:46 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__Id_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__Id_Id_0
+INFO  2024-03-12 21:09:46 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__delete_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__delete_Id_0
+INFO  2024-03-12 21:09:46 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Cita]
+OUTPUT 1
+WHERE [Id] = @p0;
+INFO  2024-03-12 21:09:46 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (7ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:10:18 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (23ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:10:18 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (1ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:11:01 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (15ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:11:01 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (34ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:11:02 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (9ms) [Parameters=[@__Id_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__Id_Id_0
+INFO  2024-03-12 21:11:02 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__delete_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__delete_Id_0
+INFO  2024-03-12 21:11:02 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (15ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Cita]
+OUTPUT 1
+WHERE [Id] = @p0;
+INFO  2024-03-12 21:11:02 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (12ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:11:10 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (11ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-12 21:11:11 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:11:11 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__Id_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__Id_Id_0
+INFO  2024-03-12 21:11:11 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (1ms) [Parameters=[@__delete_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__delete_Id_0
+INFO  2024-03-12 21:11:11 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Cita]
+OUTPUT 1
+WHERE [Id] = @p0;
+INFO  2024-03-12 21:11:11 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:11:16 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-12 21:11:16 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:11:18 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__Id_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__Id_Id_0
+INFO  2024-03-12 21:11:18 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__delete_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__delete_Id_0
+INFO  2024-03-12 21:11:18 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Cita]
+OUTPUT 1
+WHERE [Id] = @p0;
+INFO  2024-03-12 21:11:18 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:11:22 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (5ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:11:22 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:11:29 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-12 21:11:29 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:12:03 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (127ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:12:03 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (141ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:12:11 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 200) (DbType = AnsiString), @p1='?' (Size = 100) (DbType = AnsiString), @p2='?' (DbType = DateTime), @p3='?' (DbType = Int32), @p4='?' (Size = 500) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 8000) (DbType = AnsiString), @p7='?' (Size = 500) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cita] ([DuracionEstimada], [EstadoCita], [FechaYHora], [Id_Usuario], [MotivoCita], [NombreDelProfesional], [NotasAdicionales], [UbicacionCita])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INFO  2024-03-12 21:12:11 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (4ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0
+INFO  2024-03-12 21:12:13 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__Id_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__Id_Id_0
+INFO  2024-03-12 21:12:13 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (2ms) [Parameters=[@__delete_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+WHERE [c].[Id] = @__delete_Id_0
+INFO  2024-03-12 21:12:13 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Cita]
+OUTPUT 1
+WHERE [Id] = @p0;
+INFO  2024-03-12 21:12:13 – Clase: Microsoft.EntityFrameworkCore.Database.Command - Mensaje: Executed DbCommand (3ms) [Parameters=[@__userData_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[DuracionEstimada], [c].[EstadoCita], [c].[FechaYHora], [c].[Id_Usuario], [c].[MotivoCita], [c].[NombreDelProfesional], [c].[NotasAdicionales], [c].[UbicacionCita]
+FROM [Cita] AS [c]
+INNER JOIN [Usuarios] AS [u] ON [c].[Id_Usuario] = [u].[Id]
+WHERE [u].[Id] = @__userData_Id_0

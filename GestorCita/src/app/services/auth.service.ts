@@ -4,6 +4,7 @@ import { environment } from '../environments/environment.development';
 import { ILogin, ILoginResponse } from '../interfaces/ILoginResponse';
 import { BehaviorSubject, Observable, map } from 'rxjs';
 import { IRegistro } from '../interfaces/IRegistro';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +15,7 @@ export class AuthService {
   //Y con esta obtenemos el valor del usuario que se ha logueado ( es decir, sus datos)
   public user: Observable<ILoginResponse | null>;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
     //Esta linea es para guardar el usuario que se ha logueado en el localstorage del navegador
     this.currentUserSubject = new BehaviorSubject<ILoginResponse | null>(
       JSON.parse(localStorage.getItem('user') || '{}')
@@ -52,7 +53,8 @@ export class AuthService {
   //Metodo para cerrar sesion
   logoutUser(): void {
     //Eliminamos el usuario del localstorage
-    localStorage.removeItem('user');
+    localStorage.clear();
+    this.router.navigate(['/login']);
     //Con next podemos emitir un nuevo valor, en este caso null, por que el usuario se ha deslogueado
     this.currentUserSubject.next(null);
   }

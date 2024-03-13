@@ -1,0 +1,18 @@
+<div class="container">
+
+  <img lazyLoad="assets/logoTexto.png" alt="" class="logotipo">
+  <img lazyLoad="assets/logo.png" alt="" class="logotipo">
+
+  <form>
+    <div class="formContainer">
+      <label for="exampleInputEmail1" class="label">Nueva Password</label>
+      <input type="password" class="form-control" name="newPass" id="newPass" aria-describedby="newPass"
+        [(ngModel)]="newPass" required>
+      <!-- <label for="exampleInputEmail1" class="label">Repite Password</label>
+      <input type="password" class="form-control" name="newPass2" id="newPass2" aria-describedby="newPass"
+        [(ngModel)]="newPass2" required> -->
+    </div>
+    <button type="submit" class="recuperarPass" (click)="recuperarPass()">Actualizar</button>
+  </form>
+
+</div>

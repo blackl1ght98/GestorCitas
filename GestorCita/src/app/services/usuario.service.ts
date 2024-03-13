@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { IRegistro } from '../interfaces/IRegistro';
 import { Observable } from 'rxjs';
 import { IUsuarioUpdate } from '../interfaces/IUsuarioUpdate';
+import { IChangePass } from '../interfaces/ILoginResponse';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +15,6 @@ export class UsuarioService {
   //Obtener todos los datos del usuario + sus citas
   getUserById(userId: number): Observable<IUsuarioUpdate> {
     const token = localStorage.getItem('token');
-    console.log('esto es el token: ' + token);
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       Authorization: `Bearer ${token}`,
@@ -43,11 +43,26 @@ export class UsuarioService {
       .pipe();
   }
 
-  cambiarPass(data: { id: number; NewPass: string }): Observable<string> {
-    return this.http.put(
-      `${this.API_URL}/ChangePasswordC/changePassword`,
+  cambiarPass(data: IChangePass): Observable<IChangePass> {
+    const token = localStorage.getItem('token');
+    // Verifica si el token está presente en el localStorage
+
+    // Configura el encabezado de autorización con el token
+    const headers = new HttpHeaders({
+      Authorization: `Bearer ${token}`,
+    });
+    const options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+      }),
+      body: {
+        data: data.id,
+      },
+    };
+    return this.http.put<IChangePass>(
+      `${this.API_URL}/ChangePassword/changePassword`,
       data,
-      { responseType: 'text' }
+      { responseType: 'json', headers: headers }
     );
   }
 }

@@ -38,7 +38,6 @@ export class CitaService {
   // }
   deleteCita(idCita: number): Observable<any> {
     const token = localStorage.getItem('token');
-    console.log('esto es el token: ' + token);
     // Verifica si el token está presente en el localStorage
 
     // Configura el encabezado de autorización con el token

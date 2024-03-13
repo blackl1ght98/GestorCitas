@@ -3,6 +3,7 @@ import { IUsuarioUpdate } from '../interfaces/IUsuarioUpdate';
 import { UsuarioService } from '../services/usuario.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
+import { IChangePass } from '../interfaces/ILoginResponse';
 
 @Component({
   selector: 'app-mis-datos',
@@ -41,5 +42,28 @@ export class MisDatosComponent implements OnInit {
         console.log('Usuario actualizado', usuarioActualizado);
         // Aquí puedes manejar la respuesta del servidor, por ejemplo, mostrando un mensaje de éxito.
       });
+  }
+
+  cambioPass: IChangePass = {
+    id: 0,
+    newPass: '',
+  };
+  cambioPassService() {
+    const idStr = localStorage.getItem('id'); // Obtener la ID como cadena desde el localStorage
+    const idNum = parseInt(idStr!, 10); // Convertir la cadena a número usando parseInt()
+
+    // Verificar si idNum es un número válido antes de usarlo
+    if (!isNaN(idNum)) {
+      this.cambioPass.id = idNum;
+
+      this.usuarioService.cambiarPass(this.cambioPass).subscribe({
+        next: (res) => {
+          console.log(res);
+        },
+        error: (err) => {
+          console.log(err);
+        },
+      });
+    }
   }
 }

@@ -36,7 +36,33 @@
           </div>
           <button type="submit" class="btn btn-light mb-2 w-100">Actualizar</button>
         </div>
+
       </form>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Cambio contraseña
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Cambiar contraseña</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <label for="direccion" class="form-label fs-6">Password</label>
+              <input type="password" class="form-control fs-6" id="password" [(ngModel)]="cambioPass.newPass"
+                name="password" required>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary" (click)="cambioPassService()">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

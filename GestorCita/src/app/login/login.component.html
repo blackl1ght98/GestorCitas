@@ -1,18 +1,54 @@
 <div class="container d-flex justify-content-center align-items-center min-vh-100">
-  <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="bg-white p-4 rounded shadow animated fadeIn">
-    <h1 class="h2 mb-4 fw-normal text-center">Login</h1>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label fs-5">Email</label>
-      <input type="email" class="form-control fs-5" id="exampleInputEmail1" aria-describedby="emailHelp"
-        [(ngModel)]="datoLogin.Email" name="Email" required email>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="bg-white p-4 rounded shadow animated fadeIn">
+        <h1 class="h2 mb-4 fw-normal text-center">Login</h1>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label fs-5">Email</label>
+          <input type="email" class="form-control fs-5" id="exampleInputEmail1" aria-describedby="emailHelp"
+            [(ngModel)]="datoLogin.Email" name="Email" required email>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label fs-5">Contraseña</label>
+          <input type="password" class="form-control fs-5" id="exampleInputPassword1" [(ngModel)]="datoLogin.Password"
+            name="Password" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary mb-2">Login</button>
+      </form>
     </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label fs-5">Contraseña</label>
-      <input type="password" class="form-control fs-5" id="exampleInputPassword1" [(ngModel)]="datoLogin.Password"
-        name="Password" required>
+    <div class="col-md-6">
+      <section class="container">
+        <form (ngSubmit)="recordarPassword()" class="needs-validation" novalidate>
+          <div class="form-group row align-items-center">
+            <div class="text-bg-info p-3">Si quieres recuperar la contraseña ponga su email</div>
+            <label for="usuario-form">E-mail de Recuperación</label>
+            <div class="col-sm-10">
+              <input type="email" id="mail-form" name="mail" placeholder="ejemplo@ejemplo.com" [(ngModel)]="mail"
+                required class="form-control" />
+              <div class="invalid-feedback">
+                Por favor, introduce un correo electrónico válido.
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <button [disabled]="formularioInvalido()" class="btn btn-primary mt-2" (click)="envioExitoso = true">
+              Enviar
+            </button>
+          </div>
+          <!-- Aquí es donde se mostrará el mensaje de éxito -->
+          <div *ngIf="envioExitoso" class="alert alert-success mt-2" role="alert">
+            Tu solicitud de recuperación de contraseña ha sido enviada. Por favor, revisa tu correo electrónico.
+          </div>
+          <!-- Aquí es donde se mostrará el mensaje de error -->
+          <div *ngIf="emailNoEncontrado" class="alert alert-danger mt-2" role="alert">
+            El correo electrónico proporcionado no se encuentra en nuestra base de datos.
+          </div>
+
+        </form>
+      </section>
     </div>
 
-    <button type="submit" class="btn btn-primary mb-2">Login</button>
-  </form>
+  </div>
 </div>
 <!-- Otros elementos del login aquí -->
