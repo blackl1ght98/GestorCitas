@@ -15,3 +15,8 @@ El backend de la aplicación está construido con .NET 7.0, un marco de trabajo 
     <p><strong>Gestión de usuarios:</strong> Los usuarios pueden ser eliminados y sus datos pueden ser recuperados según sea necesario.</p>
    <p><strong>Generación de tokens:</strong> Para mantener las sesiones de los usuarios y permitir la autenticación, el backend genera tokens.</p>
    <p> <strong>Hashing de contraseñas:</strong> Para garantizar la seguridad de las contraseñas de los usuarios, estas se cifran utilizando un algoritmo de hashing.</p>
+Como poner en funcionamiento el bakend:
+1º Ejecutar el comando scaffold: Scaffold-DbContext "Data Source=GUILLERMO\SQLEXPRESS;Initial Catalog=AgendaCita;Integrated Security=True;TrustServerCertificate=True" -Provider Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -force -project GestorDeCitas
+2º Poner en el archivo de secretos: ClaveJWT y CONNECTION_STRING, 
+ClaveJWT-> tendra un valor largo
+CONNECTION_STRING-> cadena de conexion de BD
